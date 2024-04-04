@@ -1,0 +1,43 @@
+@use "../../sass/abstract/variables.scss" as *;
+
+.mobile-menu {
+  background-color: $why-light-background-colour;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  padding: 1rem;
+  &__container {
+    padding: 0 $mobile-spacing-side;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    list-style: none;
+    text-decoration: none;
+  }
+
+  &__button {
+    display: block;
+    text-align: center;
+    background-color: $primary-colour;
+    color: $why-light-card;
+    width: 5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+
+    &--post {
+      border: none;
+    }
+  }
+}

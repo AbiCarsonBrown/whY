@@ -1,0 +1,76 @@
+@use "../../sass/abstract/variables.scss" as *;
+
+.new-post {
+  display: flex;
+  position: fixed;
+  bottom: 3rem;
+  left: 7.5vw;
+
+  flex-direction: column;
+  align-items: center;
+
+  &__wrapper {
+    width: 85vw;
+    background-color: $primary-colour;
+    border-radius: 0.5rem;
+    padding: $mobile-spacing;
+  }
+
+  &__user {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: $why-light-card;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    resize: none;
+    border: none;
+    border-radius: 0.5rem;
+    height: 5rem;
+    width: 100%;
+    padding: 0.5rem;
+    color: $primary-colour;
+  }
+
+  &__submit {
+    border: none;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    background-color: $why-light-background-colour;
+    padding: 0.5rem;
+  }
+
+  &__bubble {
+    border-radius: 5rem;
+    background-color: $primary-colour;
+
+    &--top {
+      margin-right: 4rem;
+      margin-top: 0.5rem;
+      width: 5rem;
+      height: 5rem;
+    }
+
+    &--middle {
+      margin-right: 1rem;
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &--bottom {
+      margin-left: 2rem;
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  &__error {
+    &--none {
+      display: none;
+    }
+  }
+}

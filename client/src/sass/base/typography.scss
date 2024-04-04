@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Futura";
+  src: url("../../assets/fonts/Futura\ Light\ font.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../../assets/fonts/Futura\ Book\ font.ttf");
+  font-weight: 450;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../../assets/fonts/Futura\ Bold\ font.ttf");
+  font-weight: 700;
+}
+
+* {
+  font-family: "Futura", monospace, sans-serif;
+}

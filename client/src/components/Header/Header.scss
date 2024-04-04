@@ -1,0 +1,12 @@
+.header {
+  &__container {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    margin: 0;
+    width: 4rem;
+  }
+}

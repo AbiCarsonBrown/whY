@@ -1,0 +1,76 @@
+@use "../../sass/abstract/variables.scss" as *;
+
+.thought {
+  background-color: $why-light-card;
+  border-radius: 0.5rem;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  &__username {
+    margin: 0;
+  }
+
+  &__timestamp {
+    margin: 0;
+  }
+
+  &__delete-button {
+    color: $why-black;
+    height: 1.5rem;
+    width: 1.5rem;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+  }
+
+  &__thought {
+    padding: 0 1rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  &__replies-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  &__reply-button {
+    padding: 0 0.8rem;
+    font-size: 0.8rem;
+    border: none;
+    color: $why-light-card;
+    border-radius: 0.5rem;
+    background-color: $primary-colour;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__likes-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  &__like-button {
+    border: none;
+    background: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

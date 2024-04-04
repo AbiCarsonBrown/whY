@@ -1,0 +1,39 @@
+@use "../../sass/abstract/variables.scss" as *;
+
+.main {
+  min-height: 48rem;
+  height: 100%;
+  width: 100%;
+  background-color: $why-light-background-colour;
+  padding-bottom: 5rem;
+}
+
+.feed {
+  &__container {
+    padding: 0 $mobile-spacing-side;
+  }
+
+  &__title {
+    padding-top: $mobile-spacing-top;
+    margin: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 1rem;
+  }
+
+  &__item {
+    list-style: none;
+  }
+}
+
+.new {
+  display: none;
+
+  &--show {
+    display: block;
+  }
+}
