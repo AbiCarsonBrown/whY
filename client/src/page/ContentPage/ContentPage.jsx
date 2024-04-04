@@ -7,8 +7,7 @@ import { Navigate } from "react-router-dom";
 import MobileMenu from "../../components/MobileMenu/MobileMenu";
 
 export default function ContentPage() {
-  const URL = "localhost";
-  const PORT = 8080;
+  const URL = process.env.REACT_APP_BASE_URL || "http://localhost:8000";
   const userData = JSON.parse(localStorage.getItem("userData"));
   console.log(userData);
 
@@ -18,7 +17,7 @@ export default function ContentPage() {
 
   const fetchThoughts = async () => {
     try {
-      const { data } = await axios.get("http://" + URL + ":" + PORT);
+      const { data } = await axios.get(URL);
       setThoughtsList(data);
       console.log(thoughtsList);
     } catch (error) {
@@ -38,12 +37,12 @@ export default function ContentPage() {
   }
 
   const likePostHandler = async (id) => {
-    await axios.put("http://" + URL + ":" + PORT + "/" + id);
+    await axios.put(`${URL}/${id}`);
     fetchThoughts();
   };
 
   const deletePostHandler = async (id) => {
-    await axios.delete("http://" + URL + ":" + PORT + "/" + id);
+    await axios.delete(`${URL}/${id}`);
     fetchThoughts();
   };
 
@@ -62,7 +61,7 @@ export default function ContentPage() {
     if (!formIsValid) {
       return setFormErrors(errors);
     }
-    await axios.post("http://" + URL + ":" + PORT, newPost);
+    await axios.post(URL, newPost);
     event.target.reset();
     fetchThoughts();
     setShowPost(false);
